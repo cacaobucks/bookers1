@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration[6.1]
       t.string :author
       t.integer :year_published
       t.timestamps
-      rename_table :lists, :books
+      add_column :books, :body, :text
     end
   end
 end
